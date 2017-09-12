@@ -1,0 +1,91 @@
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: monospace;
+    font-size: 13px;
+    color: white;
+}
+
+a:link{
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+body {
+    background-image: url("gradiente.png");
+    background-repeat: repeat-x;
+}
+
+ul{
+  display: block;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+  height: 150px;
+  margin-left: 190px;
+  background-color: rgb(51, 172, 184);
+  position: auto;
+  box-shadow: 0px 4px 4px rgb(105, 105, 105);
+  border-style: solid;
+  border-color: white;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+li{
+  float: right;
+}
+
+li a{
+  text-decoration: none;
+  display: block;
+  background-color: rgb(51, 172, 184);
+  padding: 19px;
+}
+
+li a:hover{
+  background-color: rgb(228, 208, 22);
+}
+
+.content{
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.post {
+  margin-top: 60px;
+  padding: 10px;
+  background-color: rgb(51, 172, 184);
+  text-align: center;
+  border-style: double;
+  box-shadow: 0px 4px 4px rgb(105, 105, 105);
+  border-color: rgb(0, 255, 224)
+  font-family: fantasy;
+  font-size: 14px;
+}
+
+.content2 {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.post2 {
+  margin-top: 60px;
+  padding: 10px;
+  background-color: rgb(51, 172, 184);
+  text-align: justify;
+  border-style: outset;
+  box-shadow: 0px 4px 4px rgb(105, 105, 105);
+  border-color: rgb(255, 214, 0)
+}
