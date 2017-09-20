@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.slogan{
+    float: right;
+    margin-top: 30px;
+}
+
+.logo {
+    margin-top: 2px;
+}
+
+.menu-item {
+    list-style: none;
+}
+
+.titulo {
+    font-size: 19px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.nav-superior{
+    background-color: #50B45A;
+    box-shadow: 1px 3px 7px 0px rgb(153, 153, 153);
+    overflow: auto;
+}
+
+.nav-superior > ul{
+    list-style: none;
+}
+
+.nav-superior > ul > li > a, .dropdown .dropdown-button{
+    display: block;
+    text-decoration: none;
+    color: white;
+    float:left;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.dropdown{
+    float: left;
+}
+
+.dropdown-content{
+    position: absolute;
+    background-color: #ddd;
+    width: 200px;
+    /* padding: 20px; */
+    /* font-size: 20px; */
+    display: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown .dropdown-button{
+    float:none;
+}
+
+.dropdown-button:hover {
+    color: black !important;
+}
+
+.dropdown-button {
+    font-size: 20px;
+}
+
+.nav-superior > ul > li > a:hover, .dropdown .dropdown-button:hover{
+    background-color: white;
+    color: black;
+}
+
+.dropdown-content > ul{
+    list-style: none;
+}
+
+.dropdown-content > ul > li > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content > ul > li > a:hover{
+    background-color: #ccc;
+}
+
+.nav-lateral{
+    background-color: white;
+    width: 20%;
+    height: 125%;
+    position: absolute;
+    text-align: left;
+    padding: 15px;
+    list-style: none;
+    z-index: -10;
+    box-shadow: 1px 3px 7px 0px rgb(153, 153, 153);
+}
+
+.w3-wide {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.nav-lateral{
+    list-style: none;
+}
+
+.nav-lateral ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-lateral > ul > li >  a:hover {
+    background-color: #ddd;
+}
+
+.nav-lateral ul {
+    list-style: none;
+}
