@@ -5,7 +5,7 @@ body {
 
 .sidebar {
     list-style-type: none;
-    margin: 0;
+    margin-top:0;
     padding: 0;
     width: 25%;
     background-color: #f1f1f1;
@@ -37,6 +37,9 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top:0;
+    width:100%;
 }
 
 .navbar li {
@@ -82,4 +85,12 @@ body {
 .avatar-img {
     width: 24px;
     height: 24px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 5.6%;
 }

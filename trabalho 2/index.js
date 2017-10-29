@@ -7,7 +7,6 @@ function getGroups(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             groups = JSON.parse(this.responseText);
-            console.log(groups);
             makeUL(groups);
         }
     };
@@ -29,7 +28,6 @@ function getMessages(groupid) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             messages = JSON.parse(this.responseText);
-            console.log(messages);
             makeMsgs(messages);
         }
     };
@@ -43,16 +41,16 @@ function makeUL(array) {
 
     for(var i = 0; i < array.length; i++) {
         var item = document.createElement('li');
-        var link = document.createElement('a');
+        var link = document.createElement('a'); //esse é o elemento link
         var img = document.createElement('img');
         img.src = 'person.png';
         img.width = 24;
         img.height = 24;
         link.appendChild(img);
+        link.className += " pointer";
         link.appendChild(document.createTextNode(' ' + array[i].groupName));
         link.onclick = (function () {
             var currentI = i;
-            console.log(currentI);
             return function(){
                 getMessages(array[currentI].groupID);
                 document.getElementById('nome-amigo').innerHTML = array[currentI].groupName;
