@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telemilla</title>
+    <link rel="stylesheet" href="index.css">
+    <meta>
+</head>
+<body onload="carregar()">
+
+    <div class="casa">
+            <header class="navbar">
+                    <div class="logo">
+                        <a href=""><img src="milla.png"></a>
+                    </div>
+                    <div class="group-name" id="nome-amigo"></div>
+                    <div class="login">
+                        <button id="myBtn" class="pointer">Entrar</button>
+                    </div>
+            </header>
+            
+            <div class="container">
+                <ul class="sidebar" id="amigosList">
+
+                </ul>
+
+                <div class="mensagem" id="mensagem">
+                    
+                </div>
+                <form action="" class="input-mensagem">
+                    <textarea name="message" id="msg"></textarea>
+                </form>
+
+            </div>
+            <button onclick="sendMsg()" class="send-button">Enviar</button>
+    </div>
+
+    <div class="new-group">
+        <ul class="stylist">
+            <li><a class="pointer" onclick="openGroupModal()" id="grupoButton">NOVO GRUPO</a></li>
+        </ul>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center">LOGIN</h2>
+            <br>
+            <br>
+            <div class="center">
+                <input type="text" placeholder="digite seu id" id="user">
+            </div>
+            <br>
+            <button style="margin-left: 37%; width: 100px; height: 50px;" onclick="login()">Login</button>
+        </div>
+
+    </div>
+
+    <div id="myModalGroup" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center">Novo Grupo</h2>
+            <br>
+            <div class="center">
+                <input type="text" placeholder="digite o Id do grupo" id="groupID">
+            </div>
+            <br>
+            <div class="center">
+                <input type="text" placeholder="Digite o nome do grupo" id="groupName">
+            </div>
+            <br>
+            <button style="margin-left: 37%; width: 100px; height: 50px;" onclick="salvarGroup()">Salvar Grupo</button>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

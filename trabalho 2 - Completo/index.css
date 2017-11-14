@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.casa{
+    width: 900px;
+    margin: auto;
+}
+.sidebar {
+    float: left;
+    list-style-type: none;
+    width: 25%;
+    background-color: #f1f1f1;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.sidebar li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sidebar li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.navbar{
+    overflow: hiden;
+    color: white;
+    height: 10vh;
+}
+.navbar>*{
+    background-color: black;
+    color: white;
+    float: left;
+
+}
+.login{
+    width: 30%;
+    height: 100%;
+}
+.login>button{
+    float: right;
+    height: 100%;
+    padding: 0 10px;
+    border: 0;
+    background-color: yellow;
+    box-sizing: border-box;
+}
+.group-name{
+    padding-top: 9px;
+    font-size: 2em;
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.logo{
+    width: 30%;
+    height: 100%;
+}
+.logo img{
+    margin: 3px;
+    width: 22%;
+    height: 84%;
+}
+/* .navbar ul {
+    width: 900px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top:0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+} */
+/* .header-amigo{
+    float: left;
+    width: 75%;
+    height: 15%;
+    overflow: hidden;
+    background-color: blue;
+    list-style-type: none;
+}
+
+.header-amigo li{
+    height: 100%;
+}
+.header-amigo li a {
+    height: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+} */
+.mensagem{
+    background-color: lightgoldenrodyellow;
+    float: left;
+    overflow-y: auto;
+    width: 75%;
+    height:90%;
+}
+.input-mensagem{
+    float: left;
+    width: 75%;
+    height:10%;
+    overflow: hidden;
+}
+.input-mensagem textarea{
+    float: left;
+    min-width:90%; 
+    min-height:100%;
+    max-width:90%; 
+    max-height:100%;
+}
+.input-mensagem input{
+    float: right;
+    width: 9%;
+    height: 100%;
+    border: 0;
+    background-color: yellow;
+    box-sizing: border-box;
+}
+
+.avatar-img {
+    width: 24px;
+    height: 24px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.container {
+    height: 90vh;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999999999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.new-group {
+    margin-left: 20%;
+    margin-top: -30px;
+    position: absolute;
+}
+
+.stylist , .stylist > li > a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.stylist{
+    width:100%;
+}
+.stylist > li > a {
+    padding: 14px 16px;
+}
+
+.stylist > li > a:hover {
+    background-color: mediumpurple;
+    color: white;
+}
+
+.send-button {
+    float: right;
+    margin-top: -54px;
+    width: 65px;
+    height: 54px;
+    border: 0;
+    background-color: mediumpurple;
+    color: white;
+    box-sizing: border-box;
+}
+
+.center {
+    margin-left: 26%;
+}
+
+.mensagem > h3, .mensagem > p {
+    padding: 5px;
+}
+
