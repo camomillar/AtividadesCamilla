@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Loja da Milla</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default" style="background-color: black !important">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="color: white !important; margin-top: -10px" ><img src="milla.png" width="45" height="40"></a>
+                    <a class="navbar-brand" href="#" style="color: white !important" >Loja da Milla</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" id="entrar-drop" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white !important">Entrar <span class="caret"></span></a>
+                        <ul class="dropdown-menu col-xs-12" style="width: 350px !important;">
+                            <div class="container-fluid">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Usuário</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="ex: ladygaga@email.com">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+                                        <div class="col-sm-10">
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="ex: *******">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button class="btn btn-success" onclick="login()">Entrar</button>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="cadastrar-drop" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white !important">Cadastrar <span class="caret"></span></a>
+                        <ul class="dropdown-menu col-xs-12" style="width: 350px !important;">
+                            <li>
+                                <div class="container-fluid">
+                                    <div class="form-horizontal" novalidate>
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="email-cadastro" placeholder="ex: meu@email.com.br">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+                                            <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="senha-cadastro" placeholder="ex: *******">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" id="useremail" style="color: white;"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a id="shopping-cart" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white !important">
+                           <span style="color: white;" class="glyphicon glyphicon-shopping-cart" aria-hidden="true">
+                           </span> Compras
+                        </a>
+                        <ul class="dropdown-menu col-xs-12" style="width: 350px !important;">
+                            <li>
+                                <h3 class="container-fluid">Seu Carrinho</h3>
+                                <div class="container-fluid" id="myList">
+                                </div>
+                                <button id="finalizar-btn" class="btn center-block" onclick="finalizar()">Finalizar</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" id="logout-btn" onclick="logout()" style="color: white;">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <div class="container" id="gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/dance.jpg" alt="...">
+                            <div class="caption">
+                                <h3>CD Dancing with cats</h3>
+                                <h4>R$ 49,90</h4>
+                                <p>Curta as melhores músicas parar dançar com o seu gato!</p>
+                                <div class="prod">
+                                    <input type="number" id="qtd1" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(1,'CD Dancing with cats',49.90)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/nicolas.jpg" alt="...">
+                            <div class="caption">
+                                <h3>Fronha de travesseiro Nicolas Cage</h3>
+                                <h4>R$ 34,90</h4>
+                                <p>Durma com o seu ídolo!</p>
+                                <div class="prod">
+                                    <input type="number"  id="qtd2" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(2,'Fronha de travesseiro Nicolas Cage',34.90)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/bacon.png" alt="...">
+                            <div class="caption">
+                                <h3>Bandaid de bacons</h3>
+                                <h4>R$ 5,00</h4>
+                                <div class="prod">
+                                    <input type="number" id="qtd3" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(3,'Bandaid de bacons',5.00)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/marlyn.jpg" alt="...">
+                            <div class="caption">
+                                <h3>Roupa de Marilyn Monroe para cachorros</h3>
+                                <h4>R$ 85,00</h4>
+                                <div class="prod">
+                                    <input type="number"  id="qtd4" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(4,'Roupa de Marilyn Monroe para cachorros',85.00)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/cat.jpg" alt="...">
+                            <div class="caption">
+                                <h3>Chifre de unicórnio para gatos</h3>
+                                <h4>R$27,90</h4>
+                                <div class="prod">
+                                    <input type="number" id="qtd5" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(5,'Chifre de unicórnio para gatos',27.90)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/trump.jpg" alt="...">
+                            <div class="caption">
+                                <h3>Papel higiênico Donald Trump</h3>
+                                <h4>R$ 2,00</h4>
+                                <div class="prod">
+                                    <input type="number"  id="qtd6" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(6,'Papel higiênico Donald Trump',2.00)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/comida.jpg" alt="...">
+                            <div class="caption">
+                                <h3>Comida para unicórnios</h3>
+                                <h4>R$ 150,00</h4>
+                                <div class="prod">
+                                    <input type="number"  id="qtd7" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(7,'Comida para unicórnios',150.00)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-3">
+                        <div class="thumbnail">
+                            <img src="imgs/luvas.jpg" alt="...">
+                            <div class="caption">
+                                <h3>Luvas de cueca</h3>
+                                <h4>R$ 38,50</h4>
+                                <div class="prod">
+                                    <input type="number" id="qtd8" placeholder="Quantidade" style="width: 90px">
+                                    <a href="#" class="btn btn-primary" role="button" style="background-color: rgb(18, 17, 18) !important" onclick="adicionarItem(8,'Luvas de cueca',38.50)">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
